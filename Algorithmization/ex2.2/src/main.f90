@@ -1,4 +1,4 @@
-program exercise_2_2b
+program exercise_2_2
    use Environment
    use IEEE_Arithmetic
    
@@ -41,4 +41,4 @@ contains
       end if
    end function F
    
-end program exercise_2_2b
+end program exercise_2_2

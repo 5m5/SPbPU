@@ -1,6 +1,6 @@
-FC=gfortran
-FFLAGS=-Wall -std=f2008ts -fimplicit-none -Wno-maybe-uninitialized -Wno-unused-function -static-libgfortran -flto
-FOPT=-O3 -ftree-vectorize -fopt-info-vec
+FC=ifort
+FFLAGS=-g -check all -fpe0 -warn -traceback -debug extended
+FOPT=-O3 
 
 all:
 	mkdir -p bin obj

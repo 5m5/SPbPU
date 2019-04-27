@@ -29,9 +29,9 @@ contains
       intent(in)  a, b, c
  
       D = b**2 - 4*a*c
-      if(abs(D) .LT. 1.0e-5) then
+      if(D == 0.0) then
          F = -b / (2 * a)
-      elseif(D .GT. 1.0e-5) then
+      elseif(D > 0.0) then
          F(1) = (-b + sqrt(D)) / (2 * a)
          F(2) = (-b - sqrt(D)) / (2 * a)
       else

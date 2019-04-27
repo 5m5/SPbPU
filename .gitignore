@@ -31,6 +31,12 @@
 *.out
 *.app
 
+app
+output.txt
+
+*.swp
+*.swo
+
 # Tex
 *.aux
 *.log

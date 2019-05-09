@@ -3,8 +3,7 @@ program lab_1_1
 
    implicit none
    integer, parameter               :: STUD_AMOUNT = 5, SURNAME_LEN = 15, INITIALS_LEN = 5
-   character(kind=CH_), parameter   :: MALE = Char(1052, CH_)
-   character(kind=CH_), parameter   :: CITIZEN = Char(1057, CH_)
+   character(kind=CH_), parameter   :: CITIZEN = Char(1055, CH_)
 
    character(:), allocatable  :: input_file, output_file, format
 

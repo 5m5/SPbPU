@@ -37,6 +37,8 @@ output.txt
 *.swp
 *.swo
 
+*.dat
+
 # Tex
 *.aux
 *.log

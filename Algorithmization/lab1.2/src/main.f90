@@ -37,10 +37,10 @@ program lab_1_2
 
    call Output_class_list(output_file, Citizen_Surnames, Citizen_Initials, Citizen_Gender, &
       [(CITIZEN, i = 1, Size(Citizen_Aver_Marks))], &
-      Citizen_Aver_Marks, "Успеваемость юношей:", "append")
+      Citizen_Aver_Marks, "Петербуржцы:", "append")
    call Output_class_list(output_file, Guest_Surnames, Guest_Initials, Guest_Gender, &
       [(GUEST, i = 1, Size(Guest_Aver_Marks))], &
-      Guest_Aver_Marks, "Успеваемость девушек:", "append")
+      Guest_Aver_Marks, "Гости города:", "append")
 
 contains
    subroutine Read_class_list(Input_File, Surnames, Initials, Genders, Registrations, Aver_Marks)

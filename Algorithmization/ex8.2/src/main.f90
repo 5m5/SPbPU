@@ -1,4 +1,4 @@
-program exercise_8_ex2
+program exercise_8_2
    use Environment
    use Matrix_IO
    use Matrix_process
@@ -22,4 +22,4 @@ program exercise_8_ex2
    call Prod(B, C, result)
    call OutputVector(output_file, result)
 
-end program exercise_8_ex2
+end program exercise_8_2

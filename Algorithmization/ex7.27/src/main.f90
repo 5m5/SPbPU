@@ -19,9 +19,7 @@ program exercise_7_27
    close (Out)
 
    do concurrent (i = 1:M-1:2)
-         tmp = B(i, :)
-         B(i, :) = B(i+1, :)
-         B(i+1, :) = tmp
+         B(i:i+1, :) = B(i+1:i:-1, :)
    end do
 
    ! Вывод данных.

@@ -19,7 +19,7 @@ program exercise_8_2
    call OutputMatrix(output_file, B)
    call OutputVector(output_file, C)
 
-   call Prod(B, C, result)
+   call Prod_Imp(B, C, result)
    call OutputVector(output_file, result)
 
 end program exercise_8_2

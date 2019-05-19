@@ -14,7 +14,7 @@ program exercise_7_37
    close (In)
 
    allocate (C(O, P, Q))
-   call ArrayToCube(A, C, O, P, Q)
+   call ArrayToCube_Imp(A, C, O, P, Q)
 
    open (file=output_file, encoding=E_, newunit=Out)
       write (Out, '(/, "Трёхмерная матрица:")')
@@ -25,7 +25,7 @@ program exercise_7_37
    close (Out)
 
 contains
-   pure subroutine ArrayToCube(A, C, O, P, Q)
+   pure subroutine ArrayToCube_Imp(A, C, O, P, Q)
       real(R_), intent(in)  :: A(:)
       integer, intent (in)  :: O, P, Q
       real(R_), intent(out) :: C(:, :, :)
@@ -40,5 +40,14 @@ contains
             end do
          end do
       end do
-   end subroutine ArrayToCube
+   end subroutine ArrayToCube_Imp
+
+  ! pure subroutine ArrayToCube(A, C, O, P, Q)
+  !    real(R_), intent(in)  :: A(:)
+  !    integer, intent (in)  :: O, P, Q
+  !    real(R_), intent(out) :: C(:, :, :)
+  !    integer i, j, k, z
+
+  !    C = reshape(A, (2, 10, 5))
+  ! end subroutine ArrayToCube
 end program exercise_7_37

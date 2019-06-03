@@ -21,4 +21,22 @@ contains
       
    end function String_Contains
 
+   pure function String_Contains_Imp(String, Characters) result(flag)
+      logical                       :: flag
+      type(SourceLine), intent(in)  :: String
+      type(SourceLine), intent(in)  :: Characters
+      integer                       :: i, j
+
+      do i = 1, len(String%String)
+         do j = 1, len(Characters%String)
+            if(String%String(i:i) == Characters%String(j:j)) then
+               flag = .TRUE.
+               exit
+            end if
+            flag = .FALSE.
+         end do
+      end do
+      
+   end function String_Contains_Imp
+
 end module Source_process

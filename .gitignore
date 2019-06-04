@@ -43,4 +43,6 @@ output.txt
 *.aux
 *.log
 
+bin/
+
 .DS_Store

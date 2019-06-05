@@ -1,0 +1,240 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=3.5cm,right=1cm,
+    top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage[toc,page]{appendix}
+\usepackage[hidelinks]{hyperref}
+\usepackage{secdot}
+\sectiondot{subsection}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+\newcommand{\anonsection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\pagestyle{fancy}
+\fancyhf{}
+\chead{ 
+\vspace{\baselineskip}
+}
+\cfoot{ 
+\vspace{\baselineskip}
+}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\topsep}{0pt}\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.3}
+
+\usepackage{titleps}
+\renewpagestyle{plain}{%
+\setfoot[\thepage][][]{}{}{\thepage}
+}%
+\usepackage{titleps}
+\renewpagestyle{plain}{%
+\setfoot[\thepage][][]{}{}{\thepage}
+}%
+\pagestyle{plain}
+
+\begin{document}
+\begin{titlepage}
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont Санкт-Петербургский государственный политехнический университет\par}
+\end{Center}\par
+
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont Институт компьютерных наук и технологий\par}
+\end{Center}\par
+
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont \textbf{«Высшая школа программной инженерии»}\par}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{Center}
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{КУРСОВАЯ РАБОТА}\par}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont \textbf{Преобразование материалов сборника упражнений по алгоритмизации в документ LaTeX}\par}
+\end{Center}\par
+
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont по дисциплине «Основы процесса разработки качественного \\программного продукта и его метрология»\par}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+
+\begin{adjustwidth}{0.39in}{0.0in}
+{\fontsize{14pt}{16.8pt}\selectfont Выполнил:\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.39in}{0.0in}
+{\fontsize{14pt}{16.8pt}\selectfont студент гр. в13434/22 \tabto{2.75in}  \tabto{5in} М.В.Андреев\\[0.5mm]\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.39in}{0.0in}
+{\fontsize{14pt}{16.8pt}\selectfont Руководитель:\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.39in}{0.0in}
+{\fontsize{14pt}{16.8pt}  \tabto{5in} \selectfontА.В.Петров\par}\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}\begin{adjustwidth}{0.79in}{0.0in}
+\begin{FlushRight}
+{\fontsize{14pt}{16.8pt}\selectfont 8 июня 2019 г.\par}
+\end{FlushRight}\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+\vspace{\baselineskip}\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont Санкт-Петербург\par}
+\end{Center}\par
+
+\begin{Center}
+{\fontsize{14pt}{16.8pt}\selectfont 2019\par}
+\end{Center}\par
+
+\vspace{\baselineskip}
+\end{titlepage}
+
+\begin{titlepage}
+\begin{center}
+\anonsection{\fontsize{16pt}{16.8pt}\selectfont Содержание}
+\end{center}
+{
+\setlength\extrarowheight{3pt}
+\begin{longtable}{p{6.14in}p{0.38in}}
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont Введение. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 3}} \\
+%row no:2
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 1. Описание предметной области. . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 4}} \\
+%row no:3
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2. Представление сборника задач в формате TeX . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 6}} \\
+%row no:4
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.1. Упражнение 1.2. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 6}} \\
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.2. Упражнение 2.2. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 6}} \\
+%row no:6
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.3. Упражнение 3.1б. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 6}} \\
+%row no:7
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.4. Упражнение 4.1б. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 6}} \\
+%row no:8
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.5. Упражнение 5.2. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 7}} \\
+%row no:9
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.6. Упражнение 6.1б. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 7}} \\
+%row no:10
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.7. Упражнение 7.1б. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 7}} \\
+%row no:11
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.8. Упражнение 7.7. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 7}} \\
+%row no:12
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.8. Упражнение 7.17б. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 7}} \\
+%row no:13
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.8. Упражнение 7.27. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 8}} \\
+%row no:14
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.8. Упражнение 7.37. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 8}} \\
+%row no:15
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont 2.8. Упражнение 8.2. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} &
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 8}} \\
+%row no:16
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont Заключение. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .}} & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 9}} \\
+%row no:17
+\multicolumn{1}{p{6.14in}}{{\fontsize{14pt}{16.8pt}\selectfont Список использованных источников . . . . . . . . . . . . . . . . . . . . . . . . . .} \par } & 
+\multicolumn{1}{p{0.38in}}{{\fontsize{14pt}{16.8pt}\selectfont 10}} \\
+\end{longtable}}
+\end{titlepage}
+\input{content.tex}
+\end{document}

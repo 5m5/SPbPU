@@ -37,11 +37,18 @@ contains
    end function findValue
 
    recursive subroutine writeTree(fmt, p )
-      character(len=*), intent(in) :: fmt
+      character(len=*), intent(in)    :: fmt
       type(node), pointer, intent(in) :: p
+      character(*), parameter         :: output = "output.txt"
+      integer                         :: Out = 0
+
       if ( .not. associated( p ) ) return
       call writeTree( fmt, p%left )              ! Recursion to left branch
-      write( *, fmt, advance = "no" ) p%value    ! Nodal value
+
+      open (file=output, newunit=Out, position="append")
+         write( Out, fmt, advance = "no" ) p%value    ! Nodal value
+      close (Out)
+
       call writeTree( fmt, p%right )             ! Recursion to right branch
    end subroutine writeTree
 

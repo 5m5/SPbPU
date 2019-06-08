@@ -8,7 +8,7 @@ module BinaryTreeModule
    type(node), pointer :: root => null()
 
 contains
-   recursive subroutine addNode( value, p )
+   pure recursive subroutine addNode( value, p )
       integer, intent(in) :: value
       type(node), pointer, intent(inout) :: p
       if ( .not. associated( p ) ) then
@@ -37,11 +37,18 @@ contains
    end function findValue
 
    recursive subroutine writeTree(fmt, p )
-      character(len=*), intent(in) :: fmt
+      character(len=*), intent(in)    :: fmt
       type(node), pointer, intent(in) :: p
+      character(*), parameter         :: output = "output.txt"
+      integer                         :: Out = 0
+
       if ( .not. associated( p ) ) return
       call writeTree( fmt, p%left )              ! Recursion to left branch
-      write( *, fmt, advance = "no" ) p%value    ! Nodal value
+
+      open (file=output, newunit=Out, position="append")
+         write( Out, fmt, advance = "no" ) p%value    ! Nodal value
+      close (Out)
+
       call writeTree( fmt, p%right )             ! Recursion to right branch
    end subroutine writeTree
 

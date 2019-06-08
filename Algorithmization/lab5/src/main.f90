@@ -8,7 +8,7 @@ program lab5
    integer                     :: N = 0, i, In = 0, Out = 0
    integer, allocatable :: A(:)
 
-   open (file=input, newunit=In) ! С encoding=E_ может не работать на некоторых компиляторах.
+   open (file=input, newunit=In)
       read (In, *) N
       allocate (A(N))
       read (In, *) A

@@ -8,7 +8,7 @@ module BinaryTreeModule
    type(node), pointer :: root => null()
 
 contains
-   recursive subroutine addNode( value, p )
+   pure recursive subroutine addNode( value, p )
       integer, intent(in) :: value
       type(node), pointer, intent(inout) :: p
       if ( .not. associated( p ) ) then

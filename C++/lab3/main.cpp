@@ -19,7 +19,7 @@ char *customStrncat(char * __restrict dst, const char * __restrict src, size_t n
 
 int main(int argc, char *argv[]) {
     int n = atoi(argv[3]);
-    std::cout << customStrncat(argv[1], argv[2], n);
+    std::cout << customStrncat(argv[1], argv[2], n) << std::endl;
 
     return 0;
 }

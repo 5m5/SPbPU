@@ -23,7 +23,7 @@ int main() {
         std::cout << std::endl;
     }
 
-    std::cout << sum(*array, 3, 0);
+    std::cout << sum(*array, 3, 0) << std::endl;
 
     return 0;
 }

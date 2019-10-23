@@ -1,7 +1,9 @@
 #include <iostream>
 
 unsigned getByte(unsigned long x, int n) {
-    return x >> n;
+    x = x >> 8 * n;
+    x = x << 8 * 3;
+    return x;
 }
 
 int main() {

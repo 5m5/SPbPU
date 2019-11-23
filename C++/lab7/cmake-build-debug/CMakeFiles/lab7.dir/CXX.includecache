@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mikhail/projects/SPbPU/C++/lab7/Array.cpp
+stdio.h
+-
+iostream
+-
+Array.cpp
+/Users/mikhail/projects/SPbPU/C++/lab7/Array.cpp
+
+/Users/mikhail/projects/SPbPU/C++/lab7/Book.h
+iostream
+/Users/mikhail/projects/SPbPU/C++/lab7/iostream
+string
+-
+Array.cpp
+/Users/mikhail/projects/SPbPU/C++/lab7/Array.cpp
+
+/Users/mikhail/projects/SPbPU/C++/lab7/main.cpp
+iostream
+-
+Book.h
+/Users/mikhail/projects/SPbPU/C++/lab7/Book.h
+

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mikhail/projects/SPbPU/C++/STL/lab3/QueueWithPriority.h
+deque
+-
+
+/Users/mikhail/projects/SPbPU/C++/STL/lab3/main.cpp
+iostream
+-
+list
+-
+QueueWithPriority.h
+/Users/mikhail/projects/SPbPU/C++/STL/lab3/QueueWithPriority.h
+

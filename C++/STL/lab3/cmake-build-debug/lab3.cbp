@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lab3"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab3">
+				<Option output="/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/lab3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/x86_64-apple-darwin19"/>
+					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab3"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab3/fast">
+				<Option output="/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/lab3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0"/>
+					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/x86_64-apple-darwin19"/>
+					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/../../../../../../include/c++/9.2.0/backward"/>
+					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include"/>
+					<Add directory="/usr/local/Cellar/gcc/9.2.0_3/lib/gcc/9/gcc/x86_64-apple-darwin19/9.2.0/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab3/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mikhail/projects/SPbPU/C++/STL/lab3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mikhail/projects/SPbPU/C++/STL/lab3/QueueWithPriority.h">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="/Users/mikhail/projects/SPbPU/C++/STL/lab3/main.cpp">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="/Users/mikhail/projects/SPbPU/C++/STL/lab3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

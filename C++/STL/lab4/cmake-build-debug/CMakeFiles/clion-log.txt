@@ -1,0 +1,4 @@
+"/Users/mikhail/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/local/bin/gcc-9 -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-9 -G "CodeBlocks - Unix Makefiles" /Users/mikhail/projects/SPbPU/C++/STL/lab4
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/mikhail/projects/SPbPU/C++/STL/lab4/cmake-build-debug

@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mikhail/projects/SPbPU/C++/STL/lab4/container.cpp
+container.h
+/Users/mikhail/projects/SPbPU/C++/STL/lab4/container.h
+
+/Users/mikhail/projects/SPbPU/C++/STL/lab4/container.h
+iostream
+-
+memory
+-
+customiterator.h
+/Users/mikhail/projects/SPbPU/C++/STL/lab4/customiterator.h
+
+/Users/mikhail/projects/SPbPU/C++/STL/lab4/customiterator.h
+iostream
+-
+
+/Users/mikhail/projects/SPbPU/C++/STL/lab4/main.cpp
+iostream
+-
+container.h
+/Users/mikhail/projects/SPbPU/C++/STL/lab4/container.h
+

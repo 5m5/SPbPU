@@ -10,7 +10,7 @@ int main() {
     VideoCapture cap(0);
 
     // Check if camera opened successfully
-    if(!cap.isOpened()) {
+    if (!cap.isOpened()) {
         cout << "Error opening video stream" << endl;
         return -1;
     }
@@ -21,7 +21,7 @@ int main() {
 
     // Define the codec and create VideoWriter object.The output is stored in 'outcpp.avi' file. 
     VideoWriter video("..\\result.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), CAP_PROP_FPS, Size(frame_width, frame_height));
-    while(1) {
+    while (1) {
         Mat frame;
         Mat img = imread("..\\opencv.png");
         Mat result;
@@ -30,7 +30,7 @@ int main() {
         cap >> frame;
 
         // If the frame is empty, break immediately
-        if(frame.empty())
+        if (frame.empty())
             break;
 
         addWeighted(img, 0.1, frame, 0.9, 0.0, result);
@@ -43,7 +43,7 @@ int main() {
 
         // Press  ESC on keyboard to  exit
         char c = static_cast<char>(waitKey(1));
-        if(c == 27)
+        if (c == 27)
             break;
     }
 

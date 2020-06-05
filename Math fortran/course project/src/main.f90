@@ -1,5 +1,5 @@
 module global_variable
-    real :: f = 0.5
+    real :: f
 end module global_variable
 
 REAL FUNCTION integral(z) ! функция для расчета интегральной части выражени
@@ -8,19 +8,33 @@ REAL FUNCTION integral(z) ! функция для расчета интегра�
         integral = (1.6 * z)/(sin(z)**2 + 2.56 * f * cos(z)**2)
     RETURN
 END
-  
-program course
-    !implicit none
+
+REAL FUNCTION fun(y) ! функция для нахождения корня уравнения
     use global_variable
     EXTERNAL integral
+    integer :: nointegral
+    real :: A = 0.0, B = 3.1415926535897932/2, RELERR = 1.E-6, ABSERR = 0.0, &
+    ERREST, FLAG, RESULT
+    REAL y
+    f = y
 
-real :: A = 0.0, B = 3.1415926535897932/2, RELERR = 1.E-02, ABSERR = 0.0, &
-    ERREST, FLAG, RESULT, x_min = -1.0, x_max = 1.09, SEVAL, &
+    CALL QUANC8(integral, A, B, ABSERR, RELERR, RESULT, ERREST, nointegral, FLAG)
+    
+    fun = RESULT - y * 1.465862
+
+    RETURN
+END
+  
+program course
+    use global_variable
+    EXTERNAL fun
+
+    real :: RELERR = 1.E-6, x_min = -1.0, x_max = 1.09, SEVAL, ZEROIN, &
     x(21), f_x(21), LAGRANGE_VALS(21), SPLINE_VALS(21), &
-    f_min = 0.5, f_max = 2.09, BB(21), CC(21), DD(21), &
+    f_min = 0.5, f_max = 2.0, BB(21), CC(21), DD(21), &
     Q = 0, z1 = 0, z2 = 1000000, z_min = 0, z = 0
     
-    integer :: i = 1, nointegral
+    integer :: i = 1
   
     do i = 1, 6 ! поиск минимизирующего значения z*
         z = i * 0.1
@@ -59,13 +73,7 @@ real :: A = 0.0, B = 3.1415926535897932/2, RELERR = 1.E-02, ABSERR = 0.0, &
         WRITE (*,*) "Значения сплайн-функции: ", SPLINE_VALS(i)
     end do
 
-    do while (f_min <= f_max) ! Решение уравнения для нахождения F
-        CALL QUANC8(integral, A, B, ABSERR, RELERR, RESULT, ERREST, nointegral, FLAG)
-        if(abs(RESULT - 1.465862 * f) <= 1E-6) then
-            exit
-        end if
-        f = f + 0.1
-    end do
+    f =  ZEROIN(f_min, f_max, fun, RELERR)
     
     x_min = -1.0
     i = 1

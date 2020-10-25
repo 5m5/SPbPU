@@ -8,8 +8,9 @@ all:
 	$(FC) $(FFLAGS) -c src/spline.f -J obj/ -o obj/spline.o
 	$(FC) $(FFLAGS) -c src/seval.f -J obj/ -o obj/seval.o
 	$(FC) $(FFLAGS) -c src/zeroin.f -J obj/ -o obj/zeroin.o
+	$(FC) $(FFLAGS) -c src/fmin.f -J obj/ -o obj/fmin.o
 	$(FC) $(FFLAGS) $(FOPT) -c src/main.f90 -I obj/ -o obj/main.o
-	$(FC) $(FFLAGS) $(FOPT) -o bin/app ./obj/quanc8.o ./obj/spline.o ./obj/seval.o ./obj/zeroin.o obj/main.o
+	$(FC) $(FFLAGS) $(FOPT) -o bin/app ./obj/quanc8.o ./obj/spline.o ./obj/seval.o ./obj/zeroin.o ./obj/fmin.o obj/main.o
 
 	cd ./bin; ./app;
 

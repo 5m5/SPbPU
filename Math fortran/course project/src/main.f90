@@ -2,7 +2,7 @@ module global_variable
     real :: f
 end module global_variable
 
-REAL FUNCTION integral(z) ! функция для расчета интегральной части выражени
+REAL FUNCTION integral(z) ! функция для расчета интегральной части выражения
     use global_variable
     REAL z
         integral = (1.6 * z)/(sin(z)**2 + 2.56 * f * cos(z)**2)
@@ -24,31 +24,32 @@ REAL FUNCTION fun(y) ! функция для нахождения корня у�
 
     RETURN
 END
+
+REAL FUNCTION minz(z)
+    REAL z
+    
+    minz = (4*z+1)**2 + 8*z*(2**z+1) + 4**z
+
+    RETURN
+END
   
 program course
     use global_variable
-    EXTERNAL fun
+    EXTERNAL fun, minz
 
-    real :: RELERR = 1.E-6, x_min = -1.0, x_max = 1.09, SEVAL, ZEROIN, &
+    real :: RELERR = 1.E-6, x_min = -1.0, x_max = 1.09, SEVAL, ZEROIN, FMIN, &
     x(21), f_x(21), LAGRANGE_VALS(21), SPLINE_VALS(21), &
     f_min = 0.5, f_max = 2.0, BB(21), CC(21), DD(21), &
-    Q = 0, z1 = 0, z2 = 1000000, z_min = 0, z = 0
+    Q = 0, z = 0
     
     integer :: i = 1
+
+    z = FMIN(0.1, 0.5, minz, RELERR) ! поиск минимизирующего значения z*
   
-    do i = 1, 6 ! поиск минимизирующего значения z*
-        z = i * 0.1
-        z1 = (4*z+1)**2 + 8*z*(2**z+1) + 4**z
-        if(z1 <= z2) then
-            z2 = z1
-            z_min = z
-        end if
-    end do
-  
-    Q = 80.66811 * z_min ! Q
+    Q = 80.66811 * z ! Q
 
     i = 1
-    do while (x_min <= x_max) ! Рачет значений исходной функции
+    do while (x_min <= x_max) ! Расчет значений исходной функции
         x(i) = x_min
         f_x(i) = 1 / (1 + Q * x_min**2)
         x_min = x_min + 0.1
@@ -56,12 +57,12 @@ program course
     end do
     
     do i = 1, 21 ! Расчет значений интерполирующей функции Лагранжа
-        LAGRANGE_VALS(i) = LAGRANGE(x, f_x, 21, f_x(i))
+        LAGRANGE_VALS(i) = LAGRANGE(x, f_x, 21, x(i))
     end do
 
     call spline(21, x, f_x, BB, CC, DD)
-    do i = 1, 21 ! Рачет значений сплайн-функции
-        SPLINE_VALS(i) = SEVAL(21, f_x(i), x, f_x, BB, CC, DD)
+    do i = 1, 21 ! Расчет значений сплайн-функции
+        SPLINE_VALS(i) = SEVAL(21, x(i), x, f_x, BB, CC, DD)
     end do
 
     do i = 1, 21
@@ -77,7 +78,7 @@ program course
     
     x_min = -1.0
     i = 1
-    do while (x_min <= x_max) ! Рачет значений исходной функции
+    do while (x_min <= x_max) ! Расчет значений исходной функции
         x(i) = x_min
         f_x(i) = 1/(1 + f * x_min**2)
         x_min = x_min + 0.1
@@ -85,12 +86,12 @@ program course
     end do
 
     do i = 1, 21 ! Расчет значений интерполирующей функции Лагранжа
-        LAGRANGE_VALS(i) = LAGRANGE(x, f_x, 21, f_x(i))
+        LAGRANGE_VALS(i) = LAGRANGE(x, f_x, 21, x(i))
     end do
 
     call spline(21, x, f_x, BB, CC, DD)
-    do i = 1, 21 ! Рачет значений сплайн-функции
-        SPLINE_VALS(i) = SEVAL(21, f_x(i), x, f_x, BB, CC, DD)
+    do i = 1, 21 ! Расчет значений сплайн-функции
+        SPLINE_VALS(i) = SEVAL(21, x(i), x, f_x, BB, CC, DD)
     end do
 
     do i = 1, 21

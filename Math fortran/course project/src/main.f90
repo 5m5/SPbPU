@@ -28,7 +28,7 @@ END
 REAL FUNCTION minz(z)
     REAL z
     
-    minz = (4*z+1)**2 + 8*z*(2**z+1) + 4**z
+    minz = (4*z+1)**2 - 8*z*(2**z+1) + 4**z
 
     RETURN
 END
